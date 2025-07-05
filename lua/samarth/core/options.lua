@@ -27,7 +27,6 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 
-
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
@@ -51,17 +50,17 @@ vim.o.guifont = "SFMono Nerd Font:h12"
 vim.g.neovide_opacity = 0.95
 
 vim.filetype.add({
-    extension = {
-        env = "dotenv",
-    },
-    filename = {
-        [".env"] = "dotenv",
-        ["env"] = "dotenv",
-    },
-    pattern = {
-        ["[jt]sconfig.*.json"] = "jsonc",
-        ["%.env%.[%w_.-]+"] = "dotenv",
-    },
+	extension = {
+		env = "dotenv",
+	},
+	filename = {
+		[".env"] = "dotenv",
+		["env"] = "dotenv",
+	},
+	pattern = {
+		["[jt]sconfig.*.json"] = "jsonc",
+		["%.env%.[%w_.-]+"] = "dotenv",
+	},
 })
 
 opt.ruler = true
