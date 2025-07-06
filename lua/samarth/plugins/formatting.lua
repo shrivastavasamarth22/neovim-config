@@ -38,11 +38,4 @@ return {
 			end, { desc = "Format file or range (in visual mode)" })
 		end,
 	},
-
-	{
-		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
-	},
 }
