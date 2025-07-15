@@ -24,7 +24,28 @@ return {
         cssls = {},
         jsonls = {},
         emmet_ls = {},
-        clangd = {},
+        clangd = {
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--clang-tidy",
+            "--header-insertion=iwyu",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--fallback-style=llvm",
+          },
+          init_options = {
+            usePlaceholders = true,
+            completeUnimported = true,
+            clangdFileStatus = true,
+          },
+          filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+          root_dir =  function(fname)
+            local lspconfig = require("lspconfig")
+            return lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git", "Makefile")(fname)
+            
+          end
+        },
       },
     },
     config = function(_, opts)

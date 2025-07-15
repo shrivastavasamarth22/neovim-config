@@ -9,12 +9,14 @@ opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2    -- 2 spaces for indent width
 opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
-opt.smarttab = true
+opt.smarttab = true   -- insert spaces when pressing tab in insert mode
 
 -- line wrapping
-opt.wrap = true -- disable line wrapping
-vim.opt.linebreak = true
-vim.opt.showbreak = "↪"
+-- opt.wrap = true -- disable line wrapping
+-- vim.opt.linebreak = true
+-- vim.opt.showbreak = "↪"
+
+opt.wrap = false -- disable line wrapping
 
 opt.completeopt:remove("preview")
 
@@ -44,8 +46,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
-vim.o.guifont = "FiraCode Nerd Font:h12"
-vim.g.neovide_opacity = 0.95
+vim.o.guifont = "FiraCode Nerd Font:h10"
 
 vim.filetype.add({
   extension = {
@@ -61,6 +62,6 @@ vim.filetype.add({
   },
 })
 
-opt.ruler = true
+opt.ruler = true -- show cursor position in the status line
 
 opt.fillchars = { eob = " " }
