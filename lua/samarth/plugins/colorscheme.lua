@@ -79,14 +79,54 @@ return {
   },
 
   {
+    'datsfilipe/vesper.nvim',
+    lazy = false,
+    priotity = 1000,
+    config = function()
+      require("vesper").setup({
+        transparent = false,
+        italics = {
+          comments = true,
+          keywords = true,
+          functions = true,
+          strings = true,
+          variables = true,
+        }
+      })
+    end
+  },
+
+  {
+    "ptdewey/darkearth-nvim",
+    priority = 1000,
+  },
+
+  {
+    "ficcdaf/ashen.nvim",
+    lazy = false,
+    priotity = 1000,
+    opts = {
+      style_presets = {
+        italic_comments = true,
+        italic_keywords = true,
+        italic_functions = true,
+        italic_strings = true,
+      }
+    }
+  },
+
+  {
     "zaldih/themery.nvim",
     lazy = false,
     config = function()
       require("themery").setup({
         themes = {
-          "solarized-osaka",
+          "ashen",
           "bamboo",
+          "darkearth",
           "gruvbox-material",
+          "solarized-osaka",
+          "vesper",
         },
         livePreview = true, -- Enable live preview of themes
       })

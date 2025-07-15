@@ -28,6 +28,9 @@ keymap.set("n", "<C-Left>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })   
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 
+-- Open Themery
+keymap.set("n", "<leader>th", "<cmd>Themery<CR>", { desc = "Open Themery" }) -- open Themery
+
 -- Move selection up and down
 keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv", { silent = true, desc = "Move selection down" }) -- move selection down
 keymap.set("v", "<C-Up>", ":m '<-2<CR>gv=gv", { silent = true, desc = "Move selection up" })     -- move selection up
