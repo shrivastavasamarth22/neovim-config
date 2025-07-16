@@ -46,7 +46,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
-vim.o.guifont = "FiraCode Nerd Font:h10"
+vim.o.guifont = "Liga SFMono Nerd Font:h11" -- set font for GUI Vim (like GVim or Neovide)
 
 vim.filetype.add({
   extension = {
