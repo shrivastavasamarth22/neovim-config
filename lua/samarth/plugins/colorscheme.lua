@@ -79,24 +79,6 @@ return {
   },
 
   {
-    'datsfilipe/vesper.nvim',
-    lazy = false,
-    priotity = 1000,
-    config = function()
-      require("vesper").setup({
-        transparent = false,
-        italics = {
-          comments = true,
-          keywords = true,
-          functions = true,
-          strings = true,
-          variables = true,
-        }
-      })
-    end
-  },
-
-  {
     "ptdewey/darkearth-nvim",
     priority = 1000,
   },
@@ -126,7 +108,6 @@ return {
           "darkearth",
           "gruvbox-material",
           "solarized-osaka",
-          "vesper",
         },
         livePreview = true, -- Enable live preview of themes
       })

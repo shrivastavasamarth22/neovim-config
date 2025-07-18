@@ -12,9 +12,9 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 - Beautiful notifications and command palette with **Noice**
 
 ### 🔍 **Fuzzy Finding & Navigation**
-- **Telescope** - Powerful fuzzy finder for files, text, and more
+- **Telescope** - Powerful fuzzy finder for files, text, and more (opens files in new tabs by default)
 - **Flash.nvim** - Quick navigation with smart jump motions
-- **File Explorer** - Built-in file management with Snacks.nvim
+- **File Explorer** - Built-in file management with Snacks.nvim (opens files in new tabs)
 
 ### 💻 **Development Tools**
 - **LSP Support** - Full language server protocol integration

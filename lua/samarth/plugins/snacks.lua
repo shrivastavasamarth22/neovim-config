@@ -5,7 +5,9 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-    explorer = { enabled = true },
+    explorer = { 
+      enabled = true,
+    },
     indent = { enabled = false },
     input = { enabled = true },
     notifier = {
@@ -29,7 +31,12 @@ return {
     {
       "<leader>e",
       function()
-        Snacks.explorer()
+        Snacks.explorer({
+          -- Configure to open files in tabs
+          actions = {
+            edit = "tab edit",
+          }
+        })
       end,
       desc = "File Explorer",
     },
