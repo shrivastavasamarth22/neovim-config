@@ -19,10 +19,18 @@ return {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-						["<CR>"] = actions.select_tab, -- open in new tab
+						["<CR>"] = function(bufnr)
+							local selection = require("telescope.actions.state").get_selected_entry()
+							actions.close(bufnr)
+							vim.cmd("tabnew " .. selection.path)
+						end,
 					},
 					n = {
-						["<CR>"] = actions.select_tab, -- open in new tab
+						["<CR>"] = function(bufnr)
+							local selection = require("telescope.actions.state").get_selected_entry()
+							actions.close(bufnr)
+							vim.cmd("tabnew " .. selection.path)
+						end,
 					},
 				},
 			},

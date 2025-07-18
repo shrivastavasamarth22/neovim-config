@@ -10,15 +10,3 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     end
   end,
 })
-
--- Set default tab behavior for file opening
-vim.api.nvim_create_autocmd('VimEnter', {
-  group = vim.api.nvim_create_augroup('default-tab-behavior', { clear = true }),
-  callback = function()
-    -- Override the default edit command to use tabedit
-    vim.api.nvim_create_user_command('E', 'tabedit <args>', { nargs = '?', complete = 'file' })
-    
-    -- Set switchbuf to use tabs for quickfix and location lists
-    vim.opt.switchbuf = 'usetab,newtab'
-  end,
-})

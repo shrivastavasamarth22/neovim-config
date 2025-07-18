@@ -7,6 +7,11 @@ return {
     bigfile = { enabled = true },
     explorer = { 
       enabled = true,
+      keys = {
+        ["<CR>"] = function(ctx)
+          vim.cmd("tabnew " .. ctx.file)
+        end,
+      },
     },
     indent = { enabled = false },
     input = { enabled = true },
@@ -31,12 +36,7 @@ return {
     {
       "<leader>e",
       function()
-        Snacks.explorer({
-          -- Configure to open files in tabs
-          actions = {
-            edit = "tab edit",
-          }
-        })
+        Snacks.explorer()
       end,
       desc = "File Explorer",
     },
