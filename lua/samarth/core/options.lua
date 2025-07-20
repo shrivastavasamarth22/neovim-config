@@ -46,6 +46,10 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+-- scrolling behavior - keeps cursor away from edges
+opt.scrolloff = 20                          -- minimum number of lines to keep above and below cursor
+opt.sidescrolloff = 8                       -- minimum number of columns to keep left and right of cursor
+
 vim.o.guifont = "Liga SFMono Nerd Font:h11" -- set font for GUI Vim (like GVim or Neovide)
 
 vim.filetype.add({
