@@ -13,6 +13,7 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 
 ### 🔍 **Fuzzy Finding & Navigation**
 - **Telescope** - Powerful fuzzy finder for files, text, and more
+- **Harpoon** - Quick file bookmarking and navigation
 - **Flash.nvim** - Quick navigation with smart jump motions
 - **File Explorer** - Built-in file management with Snacks.nvim
 
@@ -115,6 +116,16 @@ Switch between themes instantly using `<leader>th` to open **Themery**.
 | `<leader>fs` | Find text in project |
 | `<leader>fr` | Find recent files (opens in new tab) |
 | `<C-p>` | Git files (opens in new tab) |
+
+### Harpoon (Quick File Navigation)
+| Key | Action |
+|-----|--------|
+| `<leader>ha` | Add current file to Harpoon |
+| `<leader>hm` | Toggle Harpoon quick menu |
+| `<leader>h1` | Navigate to Harpoon file 1 |
+| `<leader>h2` | Navigate to Harpoon file 2 |
+| `<leader>h3` | Navigate to Harpoon file 3 |
+| `<leader>h4` | Navigate to Harpoon file 4 |
 
 ### LSP Features
 | Key | Action |
