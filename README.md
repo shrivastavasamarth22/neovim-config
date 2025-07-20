@@ -20,6 +20,7 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 - **LSP Support** - Full language server protocol integration
 - **Smart Autocompletion** - Blink.cmp with snippet support
 - **Syntax Highlighting** - TreeSitter for accurate code parsing
+- **Smart Text Objects** - TreeSitter-based text objects for functions, classes, parameters
 - **Code Formatting** - Conform.nvim with multiple formatter support
 - **Git Integration** - Gitsigns and LazyGit for version control
 - **GitHub Copilot** - AI-powered code suggestions
@@ -27,6 +28,7 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 ### 🛠️ **Productivity Features**
 - **Session Management** - Auto-session for workspace persistence
 - **Window Management** - Easy split and tab management
+- **Smart Scrolling** - Auto-scrolloff keeps cursor away from screen edges
 - **Project-wide Search & Replace** - Spectre for advanced find/replace
 - **Todo Comments** - Highlight and navigate TODO/FIXME comments
 - **Trouble** - Beautiful diagnostics and quickfix list
@@ -147,6 +149,30 @@ Switch between themes instantly using `<leader>th` to open **Themery**.
 |-----|--------|
 | `<leader>wr` | Restore session |
 | `<leader>ws` | Save session |
+
+### TreeSitter Text Objects
+| Key | Action |
+|-----|--------|
+| `af` / `if` | Select around/inside function |
+| `ac` / `ic` | Select around/inside class |
+| `aa` / `ia` | Select around/inside parameter |
+| `al` / `il` | Select around/inside loop |
+| `ai` / `ii` | Select around/inside conditional |
+| `ab` / `ib` | Select around/inside block |
+| `a/` / `i/` | Select around/inside comment |
+| `ad` / `id` | Select around/inside function call |
+
+### TreeSitter Navigation
+| Key | Action |
+|-----|--------|
+| `]f` / `[f` | Next/previous function start |
+| `]F` / `[F` | Next/previous function end |
+| `]c` / `[c` | Next/previous class start |
+| `]C` / `[C` | Next/previous class end |
+| `]a` / `[a` | Next/previous parameter |
+| `]o` / `[o` | Next/previous loop |
+| `<leader>a` | Swap parameter with next |
+| `<leader>A` | Swap parameter with previous |
 
 ## 🔧 Language Support
 
