@@ -18,6 +18,27 @@ return {
     notifier = {
       enabled = true,
       timeout = 3000,
+      width = { min = 40, max = 0.4 },
+      height = { min = 1, max = 0.6 },
+      -- Style configurations
+      style = "compact", -- compact, minimal, fancy
+      top_down = true, -- Show notifications from top to bottom
+      date_format = "%R", -- Time format
+      -- Animation settings
+      refresh = 50, -- Refresh rate for animations
+      sort = { "level", "added" }, -- Sort notifications
+      -- Custom icons for different levels
+      icons = {
+        error = " ",
+        warn = " ",
+        info = " ",
+        debug = " ",
+        trace = " ",
+      },
+      -- Keep history of notifications
+      keep = function(notif)
+        return vim.fn.fnamemodify(notif.msg[1] or "", ":t") ~= "health.txt"
+      end,
     },
     quickfile = { enabled = true },
     scope = { enabled = true },

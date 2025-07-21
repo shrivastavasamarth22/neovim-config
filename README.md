@@ -6,6 +6,8 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 
 ### 🎨 **Beautiful UI**
 - Multiple colorscheme options with live preview via **Themery**
+- **Color highlighting** - See actual colors for hex codes, RGB values
+- **Enhanced notifications** - Beautiful animated notifications with Snacks
 - Customizable dashboard with **Alpha**
 - Enhanced status line with **Lualine**
 - Modern buffer/tab management with **Bufferline**
@@ -22,6 +24,7 @@ A modern, feature-rich Neovim configuration built with Lua, designed for product
 - **Smart Autocompletion** - Blink.cmp with snippet support
 - **Syntax Highlighting** - TreeSitter for accurate code parsing
 - **Smart Text Objects** - TreeSitter-based text objects for functions, classes, parameters
+- **Advanced Code Folding** - UFO for intelligent LSP/TreeSitter-based folding
 - **Code Formatting** - Conform.nvim with multiple formatter support
 - **Git Integration** - Gitsigns and LazyGit for version control
 - **GitHub Copilot** - AI-powered code suggestions
@@ -184,6 +187,21 @@ Switch between themes instantly using `<leader>th` to open **Themery**.
 | `]o` / `[o` | Next/previous loop |
 | `<leader>a` | Swap parameter with next |
 | `<leader>A` | Swap parameter with previous |
+
+### Code Folding (UFO)
+| Key | Action |
+|-----|--------|
+| `zR` | Open all folds |
+| `zM` | Close all folds |
+| `zr` | Open folds except kinds |
+| `zm` | Close folds with |
+| `zp` | Peek folded lines under cursor |
+
+### Visual Enhancements
+| Key | Action |
+|-----|--------|
+| `<leader>ct` | Toggle colorizer |
+| `<leader>cr` | Reload colorizer for all buffers |
 
 ## 🔧 Language Support
 

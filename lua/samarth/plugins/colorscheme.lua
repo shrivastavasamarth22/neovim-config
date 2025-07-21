@@ -98,6 +98,12 @@ return {
   },
 
   {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
     "zaldih/themery.nvim",
     lazy = false,
     config = function()
@@ -107,6 +113,7 @@ return {
           "bamboo",
           "darkearth",
           "gruvbox-material",
+          "miasma",
           "solarized-osaka",
         },
         livePreview = true, -- Enable live preview of themes
